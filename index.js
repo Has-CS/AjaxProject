@@ -177,8 +177,6 @@
 // })
 
 
-
-
 // Load Data From GitHub Api
 
 var loadBtnGH = document.getElementById("loadbtnGH");
@@ -186,24 +184,25 @@ var contentDivGH = document.getElementById("contentDivGH");
 
 loadBtnGH.addEventListener("click", function(){
         var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.github.com/users", true);
+
         xhr.onreadystatechange = function(){
             if(this.readyState == 4 && this.status == 200){
                 console.log(this.responseText);
                 var usersGH = JSON.parse(this.responseText);
-                var usersGHOutput = "<h4> GIT HUB Users </h3> <br>";
+                var usersGHOutput = "";
                 for(var k=0; k<usersGH.length; k++){
-                    usersGHOutput += '<ul>' +
-                    '<h6> User ' + [k+1] +'</h6> '+
+                    
+                    usersGHOutput += "<h3></h3> <br> <div id='gUsers'>";
+                    usersGHOutput += '<img src="'+ usersGH[k].avatar_url +'" width ="70" height="70">'+
+                    '<ul>' +
+                    '<li> ID : '+ usersGH[k].id +'</li>'+
                     '<li> User Login : '+ usersGH[k].login +'</li>'+
-                    '<li> ID URL : '+ usersGH[k].url +'</li>'+
-                    '<li> Type : '+ usersGH[k].type +'</li>'+
-                    '<li> Site Admin : '+ usersGH[k].site_admin +'</li>'+
-                    '</ul>'
+                    '</ul>' +
+                    '</div>'
                 }
-                contentDivGH.innerHTML = usersGHOutput;
-                
+                contentDivGH.innerHTML = usersGHOutput;              
                 }
         };
-        xhr.open("GET", "https://api.github.com/users", true);
         xhr.send();
     })
