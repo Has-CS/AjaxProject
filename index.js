@@ -51,4 +51,91 @@
 // })
 
 
-//Load JSON Externally
+//Load JSON Through Api Externally
+
+// var loadBtnUsers = document.getElementById('loadbtnUsers');
+// var loadBtnPosts = document.getElementById('loadbtnPosts');
+// var loadBtnPhotos = document.getElementById('loadbtnPhotos');
+// var loadBtnToDos = document.getElementById('loadbtnToDos');
+
+// var EJContentDiv = document.getElementById('EJContentDiv');
+
+// var usersDiv = document.getElementById('usersDiv');
+// var postsDiv = document.getElementById('postsDiv');
+// var photosDiv = document.getElementById('photossDiv');
+// var todosDiv = document.getElementById('todosDiv');
+
+
+// // Load Users
+
+// loadBtnUsers.addEventListener("click", function(){
+//     var xhr = new XMLHttpRequest();
+//     xhr.onreadystatechange = function(){
+//         if(this.readyState == 4 && this.status == 200){
+//             console.log(this.responseText);
+//         }
+//     };
+//     xhr.open("GET", "https://jsonplaceholder.typicode.com/users", true);
+//     xhr.send();
+
+// })
+
+// // Load Posts
+
+// loadBtnPosts.addEventListener("click", function(){
+//     var xhr = new XMLHttpRequest();
+//     xhr.onreadystatechange = function(){
+//         if(this.readyState == 4 && this.status == 200){
+//             console.log(this.responseText);
+//         }
+//     };
+//     xhr.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
+//     xhr.send();
+
+// })
+
+// // Load Photos
+
+// loadBtnPhotos.addEventListener("click", function(){
+//     var xhr = new XMLHttpRequest();
+//     xhr.onreadystatechange = function(){
+//         if(this.readyState == 4 && this.status == 200){
+//             console.log(this.responseText);
+//         }
+//     };
+//     xhr.open("GET", "https://jsonplaceholder.typicode.com/photos", true);
+//     xhr.send();
+
+// })
+
+// // Load Todos
+
+// loadBtnToDos.addEventListener("click", function(){
+//     var xhr = new XMLHttpRequest();
+//     xhr.onreadystatechange = function(){
+//         if(this.readyState == 4 && this.status == 200){
+//             console.log(this.responseText);
+//         }
+//     };
+//     xhr.open("GET", "https://jsonplaceholder.typicode.com/todos", true);
+//     xhr.send();
+
+// })
+
+
+
+// Load Data From GitHub Api
+
+var loadBtnGH = document.getElementById("loadbtnGH");
+var contentDivGH = document.getElementById("contentDivGH");
+
+loadBtnGH.addEventListener("click", function(){
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                console.log(this.responseText);
+            }
+        };
+        xhr.open("GET", "https://api.github.com/users", true);
+        xhr.send();
+    })

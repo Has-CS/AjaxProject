@@ -9,7 +9,7 @@
     margin-right: 100px;
 }
 
-/* Load data From Text File*/
+/* Load data From Local JSON File*/
 
 #loadbtnJL{
     width:350px;
@@ -17,6 +17,70 @@
 }
 
 #LJdiv{
+    width:1500px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+/* Load data From External JSON API*/
+
+#loadbtnUsers{
+    width:350px;
+    margin-left: 75px;
+}
+#loadbtnPosts{
+    width:350px;
+    margin-left: 75px;
+}#loadbtnToDos{
+    width:350px;
+    margin-left: 75px;
+}#loadbtnPhotos{
+    width:350px;
+    margin-left: 75px;
+}
+#EJContentDiv{
+    width:auto;
+    margin-left: 75px;
+}
+
+#usersDiv{
+    display: inline-block;
+    width:350px;
+    margin-right: 75px;
+    border: 1px solid black;
+}
+
+#postsDiv{
+    display: inline-block;
+    width:350px;
+    margin-right: 75px;
+    border: 1px solid black;
+}
+
+#todosDiv{
+    display: inline-block;
+    width:350px;
+    margin-right: 75px;
+    border: 1px solid black;
+}
+
+#photosDiv{
+    display: inline-block;
+    width:350px;
+    margin-right: 75px;
+    border: 1px solid black;
+}
+
+
+/* Load data From External JSON API*/
+
+#loadbtnGH{
+    width:350px;
+    margin-left: 100px;
+}
+
+#contentDivGH{
     width:1500px;
     margin-left: 100px;
     margin-right: 100px;
